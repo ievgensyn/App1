@@ -15,8 +15,10 @@ def voc(w):
         c = input("Did you mean %s instead?" % lst[0] + " press y/n: ")
         if c == "y":
             return data[lst[0]]
-        else:
+        elif c == "n":
             return "The word doesn't exist. Please double check it!"
+        else:
+            return "Sorry, we didn't understand your entry."
     else:
         return "The word doesn't exist. Please double check it!"
 
