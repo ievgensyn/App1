@@ -9,8 +9,7 @@ data = json.load(open("data.json", 'r'))
 
 
 def voc(w):
-    guess = get_close_matches(word, data.keys())[0]
-    guess1 = get_close_matches(word, data.keys())[1]
+    guess = get_close_matches(w, data.keys())[0]
     if w in data:
         return data[w]
     elif len(get_close_matches(word, data.keys())) > 0:
