@@ -3,6 +3,8 @@
 # the user ask to the program a word to explain it.
 
 import json
+import difflib
+
 
 data = json.load(open("data.json", 'r'))
 
