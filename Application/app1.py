@@ -12,7 +12,7 @@ def voc(w):
     guess = get_close_matches(w, data.keys())[0]
     if w in data:
         return data[w]
-    elif len(get_close_matches(word, data.keys())) > 0:
+    elif len(get_close_matches(w, data.keys())) > 0:
         c = input("Did you mean %s instead?" % guess + " press y/n: ")
         if c == "y":
             return data[guess]
