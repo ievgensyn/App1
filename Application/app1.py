@@ -7,15 +7,14 @@ from difflib import get_close_matches
 
 data = json.load(open("data.json", 'r'))
 
-
 def voc(w):
-    guess = get_close_matches(w, data.keys())[0]
+    lst = get_close_matches(w, data.keys())
     if w in data:
         return data[w]
-    elif len(get_close_matches(w, data.keys())) > 0:
-        c = input("Did you mean %s instead?" % guess + " press y/n: ")
+    elif len(lst) > 0:
+        c = input("Did you mean %s instead?" % lst[0] + " press y/n: ")
         if c == "y":
-            return data[guess]
+            return data[lst[0]]
         else:
             return "The word doesn't exist. Please double check it!"
     else:
